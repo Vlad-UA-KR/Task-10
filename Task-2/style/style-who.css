@@ -1,0 +1,192 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    font-family: 'Lato', sans-serif;
+    background-color: #f6f6f6;
+}
+.paper{
+    width: 1170px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/**-----------header------------------**/
+
+.header{
+    width: 100%;
+    text-align: center;
+    padding-top: 110px;
+}
+.header__h1{
+    font-size: 56px;
+    font-family: "Lato";
+    color: rgb(60, 60, 60);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    -moz-transform: matrix( 0.60657622078989,0,0,0.60779052654941,0,0);
+    -webkit-transform: matrix( 0.60657622078989,0,0,0.60779052654941,0,0);
+    -ms-transform: matrix( 0.60657622078989,0,0,0.60779052654941,0,0);
+}
+.header__line{
+    background-color: rgb(221, 219, 219);
+    width: 45px;
+    height: 4px;
+    margin: 20px auto 40px; 
+}
+.header__p{
+    font-size: 16px;
+    font-family: "Lato";
+    color: rgb(60, 60, 60);
+    line-height: 1.5;
+    margin: 0 auto 60px;
+    width: 570px;
+}
+
+/**-----------section------------------**/
+
+.bloks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bloks__container{
+    width: 23%;
+}
+.bloks__container_photo{
+    position: relative;
+    background-color: #00B6DE;
+    width: 269px;
+    height: 268px;
+}
+.bloks__container_photo-main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 100%;
+}
+.container__photo_social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 269px;
+    height: 268px;
+}
+.social__container{
+    width: 134px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social__container_link{
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    background-color: #5ecbe7;
+    position: relative;
+}
+.fa-twitter,
+.fa-facebook-f,
+.fa-google-plus-g{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    margin: auto;
+    top: 8px;
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+}
+.bloks__container_name{
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: "Lato";
+    color: rgb(40, 37, 40);
+    font-weight: 700;
+    line-height: 1;
+}
+.bloks__container_position{
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(40, 37, 40);
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+/**----------hover---------------**/
+
+.bloks__container_photo:hover > .bloks__container_photo-main{
+    z-index: -1;
+    transition: all 0.1s ease-in;
+}
+.social__container_link:hover{
+    box-shadow: 1px 1px 6px 1px gray;
+}
+.social__container_link:hover i[class*=twitter]{
+    animation: fly 2s 1 ease-in-out;
+    color: black;
+}
+.social__container_link:hover i[class*=facebook]{
+    transform-origin: center;
+    animation: rotate 1.5s 1 ease-in-out;
+    color: black;
+}
+.social__container_link:hover i[class*=google]{
+    animation: twich 0.7s 1 ease;
+    position: absolute;
+    color: black;
+}
+
+/**----------animation---------------**/
+
+@keyframes fly {
+    0%{top: 8px; left: 0px; transform: rotateY(0deg); color: white; }
+    5%{top: -18px; left: 10px; transform: rotateY(0deg); color: red; }
+    10%{top: -28px; left: 20px; transform: rotateY(0deg); color: rgb(255, 192, 247); }
+    10%{top: -38px; left: 30px; transform: rotateY(0deg); color: rgb(183, 0, 255); }
+    15%{top: -48px; left: 40px; transform: rotateY(0deg); color: rgb(13, 0, 128); }
+    20%{top: -58px; left: 50px; transform: rotateY(0deg); color: rgb(8, 227, 243); }
+    25%{top: -68px; left: 60px; transform: rotateY(0deg); color: rgb(67, 252, 11); }
+    30%{top: -78px; left: 70px; transform: rotateY(0deg); color: rgb(248, 227, 41); }
+    35%{top: -88px; left: 80px; transform: rotateY(0deg); color: rgb(241, 58, 34); }
+    40%{top: -98px; left: 90px; transform: rotateY(0deg); color: rgb(241, 221, 34); }
+    45%{top: -108px; left: 100px; transform: rotateY(0deg); color: rgb(78, 233, 17); }
+    50%{top: -108px; left: 100px; transform: rotateY(180deg); color: rgb(2, 255, 192); }
+    55%{top: -98px; left: 90px; transform: rotateY(180deg); color: rgb(17, 90, 224); }
+    60%{top: -88px; left: 80px; transform: rotateY(180deg); color: rgb(8, 24, 252); }
+    65%{top: -78px; left: 70px; transform: rotateY(180deg); color: rgb(164, 15, 250); }
+    70%{top: -68px; left: 60px; transform: rotateY(180deg); color: rgb(247, 15, 235); }
+    75%{top: -58px; left: 50px; transform: rotateY(180deg); color: rgb(247, 22, 153); }
+    80%{top: -48px; left: 40px; transform: rotateY(180deg); color: rgb(250, 15, 46); }
+    85%{top: -38px; left: 30px; transform: rotateY(180deg); color: rgb(171, 17, 243); }
+    90%{top: -28px; left: 20px; transform: rotateY(180deg); color: rgb(9, 248, 248); }
+    95%{top: -18px; left: 10px; transform: rotateY(180deg); color: rgb(8, 253, 20); }
+    100%{top: 8px; left: 0px; transform: rotateY(0deg); color: black; }
+}
+@keyframes rotate {
+    100%{transform: rotate(360deg);}
+}
+@keyframes twich {
+    0%{top: 8px; left: 0px; color: white;}
+    10%{top: -5px; left: 10px; color: rgb(255, 5, 5);}
+    20%{top: 10px; left: -10px; color: rgb(247, 123, 8);}
+    30%{top: 0px; left: 10px; color: rgb(253, 249, 5);}
+    40%{top: 0px; left: -10px; color: rgb(76, 252, 7);}
+    50%{top: 10px; left: 10px; color: rgb(6, 255, 243);}
+    60%{top: -5px; left: -10px; color: rgb(4, 103, 250);}
+    70%{top: 10px; left: 0px; color: rgb(21, 5, 252);}
+    80%{top: -5px; left: 0px; color: rgb(250, 6, 238);}
+    90%{top: -5px; left: 10px; color: rgb(248, 7, 47);}
+    100%{top: 8px; left: 0px; color: black;}
+}
