@@ -23,7 +23,7 @@
 /**----------header--------------**/
 
 .header{
-    padding-top: 100px;
+    margin-top: -40px;
 }
 .header__text{
     font-weight: 700;
@@ -34,7 +34,7 @@
 
 .paragraph{
     width: 570px;
-    margin: 30px auto 0px;
+    margin: 15px auto 0px;
 }
 .paragraph__text{
     font-size: 17px;
